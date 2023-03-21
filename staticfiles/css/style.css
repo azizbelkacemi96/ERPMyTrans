@@ -1,0 +1,109 @@
+/* Ajoutez vos styles ici */
+
+/* Ajoutez un padding et une bordure à tous les éléments */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style pour la liste des employés */
+.employee-list {
+  list-style-type: none;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.employee-list li {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.employee-list li:hover {
+  background-color: #ddd;
+}
+
+/* Style pour la liste des employés attachés */
+.attached-employee-list {
+  list-style-type: none;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.attached-employee-list li {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style pour le bouton d'attachement */
+.attach-employee-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.attach-employee-btn:hover {
+  background-color: #3e8e41;
+}
+
+/* Style pour le formulaire */
+.form-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.form-field {
+  margin-bottom: 10px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-field input[type="text"],
+.form-field input[type="date"],
+.form-field input[type="time"],
+.form-field input[type="number"],
+.form-field select {
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.406 10.781l4.594 4.593 4.594-4.593 1.406 1.406-6 6-6-6 1.406-1.406z'/%3E%3C/svg%3E")
+    no-repeat;
+  background-position: right 5px center;
+  background-size: 20px;
+  padding-right: 30px;
+}
+
+.form-field input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-field input[type="submit"]:hover {
+  background-color: #3e8e41;
+}

@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Créer une mission</h1>
+  <form method="post">
+    {% csrf_token %}
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="{{ form.name.id_for_label }}" class="form-label">Nom de la mission</label>
+        {{ form.name }}
+        <div class="invalid-feedback">
+          {{ form.name.errors }}
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="{{ form.departure_location.id_for_label }}" class="form-label">Lieu de départ</label>
+        {{ form.departure_location }}
+        <div class="invalid-feedback">
+          {{ form.departure_location.errors }}
+        </div>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="{{ form.departure_date.id_for_label }}" class="form-label">Date de départ</label>
+        {{ form.departure_date }}
+        <div class="invalid-feedback">
+          {{ form.departure_date.errors }}
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="{{ form.arrival_location.id_for_label }}" class="form-label">Lieu d'arrivée</label>
+        {{ form.arrival_location }}
+        <div class="invalid-feedback">
+          {{ form.arrival_location.errors }}
+        </div>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="{{ form.arrival_date.id_for_label }}" class="form-label">Date d'arrivée</label>
+        {{ form.arrival_date }}
+        <div class="invalid-feedback">
+          {{ form.arrival_date.errors }}
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="{{ form.km_travelled.id_for_label }}" class="form-label">Km parcourus</label>
+        {{ form.km_travelled }}
+        <div class="invalid-feedback">
+          {{ form.km_travelled.errors }}
+        </div>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-12">
+        <label for="{{ form.employees.id_for_label }}" class="form-label">Employés affectés</label>
+        {{ form.employees }}
+        <div class="invalid-feedback">
+          {{ form.employees.errors }}
+        </div>
+      </div>
+    </div>
+    <hr class="my-4">
+    <button class="w-100 btn btn-primary btn-lg" type="submit">Enregistrer</button>
+  </form>
+</div>
+{% endblock %}

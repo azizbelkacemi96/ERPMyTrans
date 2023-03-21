@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Liste des missions</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Lieu de départ</th>
+        <th>Date de départ</th>
+        <th>Lieu d'arrivée</th>
+        <th>Date d'arrivée</th>
+        <th>Km parcourus</th>
+        <th>Employés affectés</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for mission in missions %}
+        <tr>
+          <td>{{ mission.name }}</td>
+          <td>{{ mission.departure_location }}</td>
+          <td>{{ mission.departure_date }}</td>
+          <td>{{ mission.arrival_location }}</td>
+          <td>{{ mission.arrival_date }}</td>
+          <td>{{ mission.km_travelled }}</td>
+          <td>
+            {% for employee in mission.employees.all %}
+              {{ employee.name }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          </td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="7">Il n'y a aucune mission enregistrée.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

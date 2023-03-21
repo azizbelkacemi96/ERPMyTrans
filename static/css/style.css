@@ -1,0 +1,43 @@
+/* Apply some basic styles to the form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Style the form fields and labels */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Style the "Add Employees" button */
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
