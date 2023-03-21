@@ -1,69 +1,82 @@
 {% extends 'base.html' %}
 
+{% block title %}Créer une mission{% endblock %}
+
 {% block content %}
-<div class="container">
-  <h1>Créer une mission</h1>
+  <h1 class="mb-4">Créer une mission</h1>
   <form method="post">
     {% csrf_token %}
-    <div class="row g-3">
+    <div class="row">
       <div class="col-md-6">
-        <label for="{{ form.name.id_for_label }}" class="form-label">Nom de la mission</label>
-        {{ form.name }}
-        <div class="invalid-feedback">
-          {{ form.name.errors }}
+        <div class="form-group">
+          <label for="{{ mission_form.nom.id_for_label }}">Nom</label>
+          {{ mission_form.nom }}
         </div>
       </div>
       <div class="col-md-6">
-        <label for="{{ form.departure_location.id_for_label }}" class="form-label">Lieu de départ</label>
-        {{ form.departure_location }}
-        <div class="invalid-feedback">
-          {{ form.departure_location.errors }}
+        <div class="form-group">
+          <label for="{{ mission_form.distance.id_for_label }}">Distance</label>
+          {{ mission_form.distance }}
         </div>
       </div>
     </div>
-    <div class="row g-3">
+    <div class="row">
       <div class="col-md-6">
-        <label for="{{ form.departure_date.id_for_label }}" class="form-label">Date de départ</label>
-        {{ form.departure_date }}
-        <div class="invalid-feedback">
-          {{ form.departure_date.errors }}
+        <div class="form-group">
+          <label for="{{ mission_form.date_depart.id_for_label }}">Date de départ</label>
+          {{ mission_form.date_depart }}
         </div>
       </div>
       <div class="col-md-6">
-        <label for="{{ form.arrival_location.id_for_label }}" class="form-label">Lieu d'arrivée</label>
-        {{ form.arrival_location }}
-        <div class="invalid-feedback">
-          {{ form.arrival_location.errors }}
+        <div class="form-group">
+          <label for="{{ mission_form.lieu_depart.id_for_label }}">Lieu de départ</label>
+          {{ mission_form.lieu_depart }}
         </div>
       </div>
     </div>
-    <div class="row g-3">
+    <div class="row">
       <div class="col-md-6">
-        <label for="{{ form.arrival_date.id_for_label }}" class="form-label">Date d'arrivée</label>
-        {{ form.arrival_date }}
-        <div class="invalid-feedback">
-          {{ form.arrival_date.errors }}
+        <div class="form-group">
+          <label for="{{ mission_form.date_arrivee.id_for_label }}">Date d'arrivée</label>
+          {{ mission_form.date_arrivee }}
         </div>
       </div>
       <div class="col-md-6">
-        <label for="{{ form.km_travelled.id_for_label }}" class="form-label">Km parcourus</label>
-        {{ form.km_travelled }}
-        <div class="invalid-feedback">
-          {{ form.km_travelled.errors }}
+        <div class="form-group">
+          <label for="{{ mission_form.lieu_arrivee.id_for_label }}">Lieu d'arrivée</label>
+          {{ mission_form.lieu_arrivee }}
         </div>
       </div>
     </div>
-    <div class="row g-3">
-      <div class="col-md-12">
-        <label for="{{ form.employees.id_for_label }}" class="form-label">Employés affectés</label>
-        {{ form.employees }}
-        <div class="invalid-feedback">
-          {{ form.employees.errors }}
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="{{ mission_form.autres_charges.id_for_label }}">Autres charges</label>
+          {{ mission_form.autres_charges }}
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="{{ mission_form.prix.id_for_label }}">Prix</label>
+          {{ mission_form.prix }}
         </div>
       </div>
     </div>
-    <hr class="my-4">
-    <button class="w-100 btn btn-primary btn-lg" type="submit">Enregistrer</button>
+    <div class="form-group">
+      <label for="{{ mission_form.employees.id_for_label }}">Employés</label>
+      {{ mission_form.employees }}
+    </div>
+    {{ formset.management_form }}
+    {% for form in formset %}
+      <div class="card mb-4">
+        <div class="card-header">
+          Employé n°{{ forloop.counter }}
+        </div>
+        <div class="card-body">
+          {{ form.as_p }}
+        </div>
+      </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Créer</button>
   </form>
-</div>
 {% endblock %}

@@ -224,3 +224,973 @@ Traceback (most recent call last):
   File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 581, in unclosed_block_tag
     raise self.error(token, msg)
 django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 3: 'block'. Looking for one of: endblock.
+2023-03-21 20:09:56,607 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:09:56,942 [WARNING] Not Found: /my-trans/create_employee/
+2023-03-21 20:09:58,588 [WARNING] Not Found: /my-trans/create_employee/
+2023-03-21 20:09:59,682 [WARNING] Not Found: /my-trans/create_employee/
+2023-03-21 20:11:41,666 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:11:48,154 [WARNING] Not Found: /my-trans/create_employee/
+2023-03-21 20:16:23,806 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\forms.py changed, reloading.
+2023-03-21 20:16:25,757 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:22:44,939 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py changed, reloading.
+2023-03-21 20:22:46,289 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:23:00,058 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\forms.py changed, reloading.
+2023-03-21 20:23:01,455 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:23:41,255 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py changed, reloading.
+2023-03-21 20:23:42,621 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:25:39,263 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py changed, reloading.
+2023-03-21 20:25:40,557 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:25:59,858 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py changed, reloading.
+2023-03-21 20:26:01,062 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:26:15,340 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py changed, reloading.
+2023-03-21 20:26:16,774 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:26:24,616 [ERROR] Internal Server Error: /my-trans/employee_create/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 50, in create_employee
+    return redirect('employee_list')  # Redirigez vers la liste des employés après avoir créé un employé
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'employee_list' not found. 'employee_list' is not a valid view function or pattern name.
+2023-03-21 20:26:47,803 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py changed, reloading.
+2023-03-21 20:26:49,161 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:29:00,026 [ERROR] Internal Server Error: /my-trans/create_mission/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 23, in create_mission
+    return redirect('mission_list')  # Redirigez vers la liste des missions après avoir créé une mission
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'mission_list' not found. 'mission_list' is not a valid view function or pattern name.
+2023-03-21 20:29:23,378 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py changed, reloading.
+2023-03-21 20:29:24,594 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:35:29,032 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\models.py changed, reloading.
+2023-03-21 20:35:30,569 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:35:54,236 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\forms.py changed, reloading.
+2023-03-21 20:35:55,632 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:38:25,082 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:40:45,800 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:42:31,790 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py changed, reloading.
+2023-03-21 20:42:32,931 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:46:49,982 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\admin.py changed, reloading.
+2023-03-21 20:46:51,548 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:47:33,765 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:47:40,389 [WARNING] Not Found: /static/admin/css/base.css
+2023-03-21 20:47:40,396 [WARNING] Not Found: /static/admin/css/dark_mode.css
+2023-03-21 20:47:40,402 [WARNING] Not Found: /static/admin/css/nav_sidebar.css
+2023-03-21 20:47:40,407 [WARNING] Not Found: /static/admin/css/login.css
+2023-03-21 20:47:40,414 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:47:40,454 [WARNING] Not Found: /static/admin/js/nav_sidebar.js
+2023-03-21 20:47:47,555 [WARNING] Not Found: /static/admin/css/base.css
+2023-03-21 20:47:47,558 [WARNING] Not Found: /static/admin/css/nav_sidebar.css
+2023-03-21 20:47:47,561 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:47:47,566 [WARNING] Not Found: /static/admin/css/dark_mode.css
+2023-03-21 20:47:47,567 [WARNING] Not Found: /static/admin/css/dashboard.css
+2023-03-21 20:47:47,599 [WARNING] Not Found: /static/admin/js/nav_sidebar.js
+2023-03-21 20:47:57,997 [WARNING] Not Found: /static/admin/css/base.css
+2023-03-21 20:47:58,002 [WARNING] Not Found: /static/admin/css/dark_mode.css
+2023-03-21 20:47:58,007 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:47:58,012 [WARNING] Not Found: /static/admin/css/nav_sidebar.css
+2023-03-21 20:47:58,018 [WARNING] Not Found: /static/admin/css/dashboard.css
+2023-03-21 20:47:58,036 [WARNING] Not Found: /static/admin/js/nav_sidebar.js
+2023-03-21 20:47:59,596 [WARNING] Not Found: /static/admin/css/base.css
+2023-03-21 20:47:59,604 [WARNING] Not Found: /static/admin/css/dark_mode.css
+2023-03-21 20:47:59,607 [WARNING] Not Found: /static/admin/css/forms.css
+2023-03-21 20:47:59,612 [WARNING] Not Found: /static/admin/css/nav_sidebar.css
+2023-03-21 20:47:59,627 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:47:59,634 [WARNING] Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2023-03-21 20:47:59,640 [WARNING] Not Found: /static/admin/js/calendar.js
+2023-03-21 20:47:59,644 [WARNING] Not Found: /static/admin/js/jquery.init.js
+2023-03-21 20:47:59,647 [WARNING] Not Found: /static/admin/js/admin/DateTimeShortcuts.js
+2023-03-21 20:47:59,654 [WARNING] Not Found: /static/admin/js/core.js
+2023-03-21 20:47:59,658 [WARNING] Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+2023-03-21 20:47:59,663 [WARNING] Not Found: /static/admin/js/actions.js
+2023-03-21 20:47:59,668 [WARNING] Not Found: /static/admin/js/urlify.js
+2023-03-21 20:47:59,672 [WARNING] Not Found: /static/admin/js/prepopulate.js
+2023-03-21 20:47:59,678 [WARNING] Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2023-03-21 20:47:59,682 [WARNING] Not Found: /static/admin/js/prepopulate_init.js
+2023-03-21 20:47:59,696 [WARNING] Not Found: /static/admin/js/nav_sidebar.js
+2023-03-21 20:47:59,703 [WARNING] Not Found: /static/admin/js/change_form.js
+2023-03-21 20:47:59,706 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:48:18,191 [WARNING] Not Found: /static/admin/css/base.css
+2023-03-21 20:48:18,195 [WARNING] Not Found: /static/admin/css/dark_mode.css
+2023-03-21 20:48:18,199 [WARNING] Not Found: /static/admin/css/nav_sidebar.css
+2023-03-21 20:48:18,201 [WARNING] Not Found: /static/admin/css/changelists.css
+2023-03-21 20:48:18,204 [WARNING] Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2023-03-21 20:48:18,214 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:48:18,220 [WARNING] Not Found: /static/admin/js/jquery.init.js
+2023-03-21 20:48:18,223 [WARNING] Not Found: /static/admin/js/core.js
+2023-03-21 20:48:18,231 [WARNING] Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+2023-03-21 20:48:18,237 [WARNING] Not Found: /static/admin/js/prepopulate.js
+2023-03-21 20:48:18,241 [WARNING] Not Found: /static/admin/js/urlify.js
+2023-03-21 20:48:18,247 [WARNING] Not Found: /static/admin/js/actions.js
+2023-03-21 20:48:18,254 [WARNING] Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2023-03-21 20:48:18,274 [WARNING] Not Found: /static/admin/js/nav_sidebar.js
+2023-03-21 20:48:18,279 [WARNING] Not Found: /static/admin/js/filters.js
+2023-03-21 20:48:18,282 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:48:20,289 [WARNING] Not Found: /static/admin/css/base.css
+2023-03-21 20:48:20,292 [WARNING] Not Found: /static/admin/css/dark_mode.css
+2023-03-21 20:48:20,295 [WARNING] Not Found: /static/admin/css/nav_sidebar.css
+2023-03-21 20:48:20,299 [WARNING] Not Found: /static/admin/css/forms.css
+2023-03-21 20:48:20,306 [WARNING] Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2023-03-21 20:48:20,314 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:48:20,321 [WARNING] Not Found: /static/admin/js/calendar.js
+2023-03-21 20:48:20,324 [WARNING] Not Found: /static/admin/js/jquery.init.js
+2023-03-21 20:48:20,328 [WARNING] Not Found: /static/admin/js/admin/DateTimeShortcuts.js
+2023-03-21 20:48:20,335 [WARNING] Not Found: /static/admin/js/core.js
+2023-03-21 20:48:20,341 [WARNING] Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+2023-03-21 20:48:20,348 [WARNING] Not Found: /static/admin/js/actions.js
+2023-03-21 20:48:20,355 [WARNING] Not Found: /static/admin/js/urlify.js
+2023-03-21 20:48:20,358 [WARNING] Not Found: /static/admin/js/prepopulate.js
+2023-03-21 20:48:20,362 [WARNING] Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2023-03-21 20:48:20,374 [WARNING] Not Found: /static/admin/js/prepopulate_init.js
+2023-03-21 20:48:20,393 [WARNING] Not Found: /static/admin/js/nav_sidebar.js
+2023-03-21 20:48:20,397 [WARNING] Not Found: /static/admin/js/change_form.js
+2023-03-21 20:48:20,399 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:48:21,269 [WARNING] Not Found: /static/admin/css/base.css
+2023-03-21 20:48:21,271 [WARNING] Not Found: /static/admin/css/changelists.css
+2023-03-21 20:48:21,277 [WARNING] Not Found: /static/admin/css/dark_mode.css
+2023-03-21 20:48:21,284 [WARNING] Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2023-03-21 20:48:21,289 [WARNING] Not Found: /static/admin/css/nav_sidebar.css
+2023-03-21 20:48:21,302 [WARNING] Not Found: /static/admin/js/jquery.init.js
+2023-03-21 20:48:21,321 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:48:21,334 [WARNING] Not Found: /static/admin/js/actions.js
+2023-03-21 20:48:21,336 [WARNING] Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+2023-03-21 20:48:21,337 [WARNING] Not Found: /static/admin/js/core.js
+2023-03-21 20:48:21,338 [WARNING] Not Found: /static/admin/js/urlify.js
+2023-03-21 20:48:21,349 [WARNING] Not Found: /static/admin/js/prepopulate.js
+2023-03-21 20:48:21,350 [WARNING] Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2023-03-21 20:48:21,368 [WARNING] Not Found: /static/admin/js/nav_sidebar.js
+2023-03-21 20:48:21,372 [WARNING] Not Found: /static/admin/js/filters.js
+2023-03-21 20:48:21,374 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:48:50,980 [WARNING] Not Found: /static/admin/css/base.css
+2023-03-21 20:48:50,983 [WARNING] Not Found: /static/admin/css/dark_mode.css
+2023-03-21 20:48:50,985 [WARNING] Not Found: /static/admin/css/nav_sidebar.css
+2023-03-21 20:48:50,987 [WARNING] Not Found: /static/admin/css/dashboard.css
+2023-03-21 20:48:50,989 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:48:51,010 [WARNING] Not Found: /static/admin/js/nav_sidebar.js
+2023-03-21 20:48:53,718 [WARNING] Not Found: /static/admin/css/base.css
+2023-03-21 20:48:53,729 [WARNING] Not Found: /static/admin/css/dark_mode.css
+2023-03-21 20:48:53,733 [WARNING] Not Found: /static/admin/css/nav_sidebar.css
+2023-03-21 20:48:53,735 [WARNING] Not Found: /static/admin/css/forms.css
+2023-03-21 20:48:53,741 [WARNING] Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2023-03-21 20:48:53,745 [WARNING] Not Found: /static/admin/js/calendar.js
+2023-03-21 20:48:53,753 [WARNING] Not Found: /static/admin/js/jquery.init.js
+2023-03-21 20:48:53,756 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:48:53,758 [WARNING] Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+2023-03-21 20:48:53,760 [WARNING] Not Found: /static/admin/js/admin/DateTimeShortcuts.js
+2023-03-21 20:48:53,764 [WARNING] Not Found: /static/admin/js/core.js
+2023-03-21 20:48:53,769 [WARNING] Not Found: /static/admin/js/actions.js
+2023-03-21 20:48:53,774 [WARNING] Not Found: /static/admin/js/urlify.js
+2023-03-21 20:48:53,778 [WARNING] Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2023-03-21 20:48:53,779 [WARNING] Not Found: /static/admin/js/prepopulate.js
+2023-03-21 20:48:53,786 [WARNING] Not Found: /static/admin/js/prepopulate_init.js
+2023-03-21 20:48:53,811 [WARNING] Not Found: /static/admin/js/nav_sidebar.js
+2023-03-21 20:48:53,812 [WARNING] Not Found: /static/admin/js/change_form.js
+2023-03-21 20:48:53,813 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:49:24,142 [WARNING] Not Found: /static/admin/css/base.css
+2023-03-21 20:49:24,145 [WARNING] Not Found: /static/admin/css/changelists.css
+2023-03-21 20:49:24,147 [WARNING] Not Found: /static/admin/css/dark_mode.css
+2023-03-21 20:49:24,149 [WARNING] Not Found: /static/admin/css/nav_sidebar.css
+2023-03-21 20:49:24,155 [WARNING] Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2023-03-21 20:49:24,163 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:49:24,165 [WARNING] Not Found: /static/admin/js/jquery.init.js
+2023-03-21 20:49:24,172 [WARNING] Not Found: /static/admin/js/core.js
+2023-03-21 20:49:24,182 [WARNING] Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+2023-03-21 20:49:24,184 [WARNING] Not Found: /static/admin/js/prepopulate.js
+2023-03-21 20:49:24,186 [WARNING] Not Found: /static/admin/js/urlify.js
+2023-03-21 20:49:24,188 [WARNING] Not Found: /static/admin/js/actions.js
+2023-03-21 20:49:24,193 [WARNING] Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2023-03-21 20:49:24,227 [WARNING] Not Found: /static/admin/js/nav_sidebar.js
+2023-03-21 20:49:24,231 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:49:24,232 [WARNING] Not Found: /static/admin/js/filters.js
+2023-03-21 20:51:31,380 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py changed, reloading.
+2023-03-21 20:51:32,929 [INFO] Watching for file changes with StatReloader
+2023-03-21 20:59:05,974 [WARNING] Not Found: /static/admin/css/base.css
+2023-03-21 20:59:05,978 [WARNING] Not Found: /static/admin/css/dark_mode.css
+2023-03-21 20:59:05,983 [WARNING] Not Found: /static/admin/css/nav_sidebar.css
+2023-03-21 20:59:05,987 [WARNING] Not Found: /static/admin/css/changelists.css
+2023-03-21 20:59:05,990 [WARNING] Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2023-03-21 20:59:06,001 [WARNING] Not Found: /static/admin/js/jquery.init.js
+2023-03-21 20:59:06,006 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 20:59:06,010 [WARNING] Not Found: /static/admin/js/core.js
+2023-03-21 20:59:06,018 [WARNING] Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+2023-03-21 20:59:06,027 [WARNING] Not Found: /static/admin/js/urlify.js
+2023-03-21 20:59:06,029 [WARNING] Not Found: /static/admin/js/actions.js
+2023-03-21 20:59:06,036 [WARNING] Not Found: /static/admin/js/prepopulate.js
+2023-03-21 20:59:06,040 [WARNING] Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2023-03-21 20:59:06,076 [WARNING] Not Found: /static/admin/js/nav_sidebar.js
+2023-03-21 20:59:06,080 [WARNING] Not Found: /static/admin/js/filters.js
+2023-03-21 20:59:06,083 [WARNING] Not Found: /static/admin/css/responsive.css
+2023-03-21 21:02:29,340 [ERROR] Internal Server Error: /my-trans/employee_create/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 47, in create_employee
+    return render(request, "create_employee.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_employee' not found. 'create_employee' is not a valid view function or pattern name.
+2023-03-21 21:02:32,082 [ERROR] Internal Server Error: /my-trans/employee_create/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 47, in create_employee
+    return render(request, "create_employee.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_employee' not found. 'create_employee' is not a valid view function or pattern name.
+2023-03-21 21:02:33,950 [ERROR] Internal Server Error: /my-trans/create_mission/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 22, in create_mission
+    return render(request, "create_mission.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_employee' not found. 'create_employee' is not a valid view function or pattern name.
+2023-03-21 21:02:51,850 [ERROR] Internal Server Error: /my-trans/mission_list/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 33, in mission_list
+    return render(request, "mission_list.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_employee' not found. 'create_employee' is not a valid view function or pattern name.
+2023-03-21 21:03:33,505 [ERROR] Internal Server Error: /my-trans/employee_create/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 47, in create_employee
+    return render(request, "create_employee.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'employee_create' not found. 'employee_create' is not a valid view function or pattern name.
+2023-03-21 21:03:57,094 [INFO] Watching for file changes with StatReloader
+2023-03-21 21:08:28,644 [ERROR] Internal Server Error: /my-trans/employee_create/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 47, in create_employee
+    return render(request, "create_employee.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'employee_create' not found. 'employee_create' is not a valid view function or pattern name.
+2023-03-21 21:15:05,484 [ERROR] Internal Server Error: /my-trans/create_mission/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 22, in create_mission
+    return render(request, "create_mission.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_employee' not found. 'create_employee' is not a valid view function or pattern name.
+2023-03-21 21:16:12,435 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\urls.py changed, reloading.
+2023-03-21 21:16:14,054 [INFO] Watching for file changes with StatReloader
+2023-03-21 21:16:17,447 [ERROR] Internal Server Error: /my-trans/create_employee/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 47, in create_employee
+    return render(request, "create_employee.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_employee' not found. 'create_employee' is not a valid view function or pattern name.
+2023-03-21 21:16:54,465 [ERROR] Internal Server Error: /my-trans/create_employee/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 47, in create_employee
+    return render(request, "create_employee.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_employee' not found. 'create_employee' is not a valid view function or pattern name.
+2023-03-21 21:17:12,507 [ERROR] Internal Server Error: /my-trans/create_employee/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 47, in create_employee
+    return render(request, "create_employee.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_employee' not found. 'create_employee' is not a valid view function or pattern name.
+2023-03-21 21:18:10,715 [ERROR] Internal Server Error: /my-trans/create_mission/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 22, in create_mission
+    return render(request, "create_mission.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'employee_list' not found. 'employee_list' is not a valid view function or pattern name.
+2023-03-21 21:21:48,749 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\urls.py changed, reloading.
+2023-03-21 21:21:51,278 [INFO] Watching for file changes with StatReloader
+2023-03-21 21:22:06,263 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\urls.py changed, reloading.
+2023-03-21 21:22:07,564 [INFO] Watching for file changes with StatReloader
+2023-03-21 21:22:53,105 [ERROR] Internal Server Error: /my-trans/create_employee/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 47, in create_employee
+    return render(request, "create_employee.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_employee' not found. 'create_employee' is not a valid view function or pattern name.
+2023-03-21 21:23:02,785 [ERROR] Internal Server Error: /my-trans/mission_list/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 33, in mission_list
+    return render(request, "mission_list.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_employee' not found. 'create_employee' is not a valid view function or pattern name.
+2023-03-21 21:23:14,885 [INFO] Watching for file changes with StatReloader
+2023-03-21 21:23:18,871 [ERROR] Internal Server Error: /my-trans/mission_list/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 33, in mission_list
+    return render(request, "mission_list.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_employee' not found. 'create_employee' is not a valid view function or pattern name.
+2023-03-21 21:25:09,031 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\urls.py changed, reloading.
+2023-03-21 21:25:10,313 [INFO] Watching for file changes with StatReloader
+2023-03-21 21:25:11,939 [ERROR] Internal Server Error: /my-trans/create_employee/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 47, in create_employee
+    return render(request, "create_employee.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_employee' not found. 'create_employee' is not a valid view function or pattern name.
+2023-03-21 21:25:14,131 [ERROR] Internal Server Error: /my-trans/create_mission/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 22, in create_mission
+    return render(request, "create_mission.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_employee' not found. 'create_employee' is not a valid view function or pattern name.
+2023-03-21 21:30:23,250 [INFO] C:\Users\azizz\PycharmProjects\ERPMyTrans\ERPMyTrans\urls.py changed, reloading.
+2023-03-21 21:30:24,850 [INFO] Watching for file changes with StatReloader
+2023-03-21 22:14:22,290 [ERROR] Internal Server Error: /my-trans/create_mission/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 22, in create_mission
+    return render(request, "create_mission.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 518, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 581, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 5: 'block'. Looking for one of: endblock.
+2023-03-21 22:20:12,179 [ERROR] Internal Server Error: /my-trans/create_mission/
+Traceback (most recent call last):
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\azizz\PycharmProjects\ERPMyTrans\my_trans\views.py", line 22, in create_mission
+    return render(request, "create_mission.html", context)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 226, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'title' appears more than once

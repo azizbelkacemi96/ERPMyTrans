@@ -10,14 +10,15 @@ class Employee(models.Model):
 
 
 class Mission(models.Model):
-    name = models.CharField(max_length=100, default=None)
-    departure_location = models.CharField(max_length=100, default=None, null=True)
-    departure_date = models.DateField(default=None, null=True)
-    arrival_location = models.CharField(max_length=100, default=None, null=True)
-    arrival_date = models.DateField(default=None, null=True)
-    km_travelled = models.PositiveIntegerField(default=None, null=True)
-    employees = models.ManyToManyField(Employee)
-    extra_charges = models.TextField(blank=True, null=True)
+    nom = models.CharField(max_length=100)
+    date_depart = models.DateField()
+    lieu_depart = models.CharField(max_length=100)
+    date_arrivee = models.DateField()
+    lieu_arrivee = models.CharField(max_length=100)
+    distance = models.IntegerField()
+    autres_charges = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+    prix = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+    employees = models.ManyToManyField(Employee, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.nom

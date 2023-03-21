@@ -1,9 +1,12 @@
-<h3>Customer Form</h3>
-<hr>
+{% extends 'base.html' %}
 
-<form action="" method="post">
-	{% csrf_token %}
-	{{form}}
-	<input type="submit">
+{% block title %}Créer un employé{% endblock %}
 
-</form>
+{% block content %}
+  <h1 class="mb-4">Créer un employé</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Créer</button>
+  </form>
+{% endblock %}

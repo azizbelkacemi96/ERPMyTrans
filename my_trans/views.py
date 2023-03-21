@@ -3,35 +3,24 @@ import logging
 
 from django.shortcuts import render, redirect
 from django.forms import formset_factory
-from .forms import MissionForm
+from .forms import MissionForm, EmployeeForm
 from .models import Mission, Employee
 
 logger = logging.getLogger(__name__)
 
 def create_mission(request):
-    EmployeeFormSet = formset_factory(MissionForm, extra=1)
     if request.method == "POST":
         mission_form = MissionForm(request.POST)
-        formset = EmployeeFormSet(request.POST)
-        if mission_form.is_valid() and formset.is_valid():
+        if mission_form.is_valid():
             mission = mission_form.save()
-            employees = formset.cleaned_data
-            for employee in employees:
-                if employee:
-                    full_name = employee['first_name'] + ' ' + employee['last_name']
-                    employee = employees[0]
-                    print(employee)
-                    emp = Employee.objects.get(first_name=employee['first_name'], last_name=employee['last_name'])
-                    print(emp)
-                    mission.employees.add(emp)
+            #return redirect('mission_list')  # Redirige vers la liste des missions après avoir créé une mission
     else:
         mission_form = MissionForm()
-        formset = EmployeeFormSet()
     context = {
         "mission_form": mission_form,
-        "formset": formset,
     }
     return render(request, "create_mission.html", context)
+
 
 
 
@@ -44,12 +33,14 @@ def mission_list(request):
     return render(request, "mission_list.html", context)
 
 
+
 def create_employee(request):
-    form = MissionForm()
+    form = EmployeeForm()  # Utilisez EmployeeForm au lieu de MissionForm
     if request.method == "POST":
-        form = MissionForm(request.POST)
+        form = EmployeeForm(request.POST)
         if form.is_valid():
             form.save()
+           # return redirect('employee_list')  # Redirigez vers la liste des employés après avoir créé un employé
     context = {
         "form": form,
     }
