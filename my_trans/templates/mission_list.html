@@ -16,6 +16,7 @@
         <th>Distance</th>
         <th>Autres charges</th>
         <th>Prix</th>
+        <th>Employés</th> <!-- Nouvelle colonne pour les employés -->
       </tr>
     </thead>
     <tbody>
@@ -30,6 +31,12 @@
           <td>{{ mission.distance }}</td>
           <td>{{ mission.autres_charges }}</td>
           <td>{{ mission.prix }}</td>
+          <td>
+            {% for employee in mission.employees.all %}
+              {{ employee.first_name }} {{ employee.last_name }}
+              {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+          </td> <!-- Nouvelle cellule pour afficher les employés associés à la mission -->
         </tr>
       {% endfor %}
     </tbody>

@@ -1194,3 +1194,6 @@ Traceback (most recent call last):
   File "C:\Users\azizz\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 226, in do_block
     raise TemplateSyntaxError(
 django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'title' appears more than once
+2023-03-23 18:21:48,633 [INFO] Watching for file changes with StatReloader
+2023-03-23 18:22:26,262 [WARNING] Not Found: /
+2023-03-23 18:22:28,445 [WARNING] Not Found: /favicon.ico
