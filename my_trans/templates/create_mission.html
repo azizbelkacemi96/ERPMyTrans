@@ -1,82 +1,140 @@
 {% extends 'base.html' %}
 
-{% block title %}Créer une mission{% endblock %}
-
 {% block content %}
-  <h1 class="mb-4">Créer une mission</h1>
-  <form method="post">
-    {% csrf_token %}
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="{{ mission_form.nom.id_for_label }}">Nom</label>
-          {{ mission_form.nom }}
+<h2>Créer une mission</h2>
+<form method="post">
+{% csrf_token %}
+  <div class="form-group">
+    <label for="{{ form.nom.id_for_label }}">Nom</label>
+    {{ form.nom }}
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.date_depart.id_for_label }}">Date de départ</label>
+    {{ form.date_depart }}
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.lieu_depart.id_for_label }}">Lieu de départ</label>
+    {{ form.lieu_depart }}
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.date_arrivee.id_for_label }}">Date d'arrivée</label>
+    {{ form.date_arrivee }}
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.lieu_arrivee.id_for_label }}">Lieu d'arrivée</label>
+    {{ form.lieu_arrivee }}
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.distance.id_for_label }}">Distance</label>
+    {{ form.distance }}
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.hotel.id_for_label }}">Hôtel</label>
+    {{ form.hotel }}
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.volume.id_for_label }}">Volume</label>
+    {{ form.volume }}
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.categorie.id_for_label }}">Catégorie</label>
+    {{ form.categorie }}
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.peage.id_for_label }}">Péage</label>
+    {{ form.peage }}
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.location.id_for_label }}">Location</label>
+    {{ form.location }}
+  </div>
+
+  <div class="form-group">
+    <label for="{{ form.employees.id_for_label }}">Employés</label>
+    {{ form.employees }}
+  </div>
+
+  <button type="submit" class="btn btn-primary">Créer</button>
+</form>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addExpenseModal">
+    Ajouter des frais
+  </button>
+
+  <div class="modal fade" id="addExpenseModal" tabindex="-1" role="dialog" aria-labelledby="addExpenseModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addExpenseModalLabel">Ajouter des frais</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="{{ mission_form.distance.id_for_label }}">Distance</label>
-          {{ mission_form.distance }}
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="id_expense_name">Nom</label>
+            <input type="text" class="form-control" id="id_expense_name" name="expense_name">
+          </div>
+          <div class="form-group">
+            <label for="id_expense_price">
+            <label for="id_expense_price">Prix</label>
+            <input type="number" class="form-control" id="id_expense_price" name="expense_price">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary">Enregistrer</button>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="{{ mission_form.date_depart.id_for_label }}">Date de départ</label>
-          {{ mission_form.date_depart }}
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="{{ mission_form.lieu_depart.id_for_label }}">Lieu de départ</label>
-          {{ mission_form.lieu_depart }}
-        </div>
-      </div>
+  </div>
+
+  <div style="display: none;">
+    <div id="expensesContainer">
     </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="{{ mission_form.date_arrivee.id_for_label }}">Date d'arrivée</label>
-          {{ mission_form.date_arrivee }}
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="{{ mission_form.lieu_arrivee.id_for_label }}">Lieu d'arrivée</label>
-          {{ mission_form.lieu_arrivee }}
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="{{ mission_form.autres_charges.id_for_label }}">Autres charges</label>
-          {{ mission_form.autres_charges }}
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="{{ mission_form.prix.id_for_label }}">Prix</label>
-          {{ mission_form.prix }}
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="{{ mission_form.employees.id_for_label }}">Employés</label>
-      {{ mission_form.employees }}
-    </div>
-    {{ formset.management_form }}
-    {% for form in formset %}
-      <div class="card mb-4">
-        <div class="card-header">
-          Employé n°{{ forloop.counter }}
-        </div>
-        <div class="card-body">
-          {{ form.as_p }}
-        </div>
-      </div>
-    {% endfor %}
-    <button type="submit" class="btn btn-primary">Créer</button>
-  </form>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const addExpenseButton = document.querySelector("#addExpenseModal .btn-primary");
+      addExpenseButton.addEventListener("click", function() {
+        const expenseName = document.querySelector("#id_expense_name");
+        const expensePrice = document.querySelector("#id_expense_price");
+        if (expenseName.value !== "" && expensePrice.value !== "") {
+          const newRow = document.createElement("tr");
+          newRow.innerHTML = `<td>${expenseName.value}</td><td>${expensePrice.value}</td>`;
+          document.querySelector("#expensesTable tbody").appendChild(newRow);
+
+          // Créez des éléments de formulaire cachés pour les frais supplémentaires.
+          const expensesContainer = document.querySelector("#expensesContainer");
+          const inputName = document.createElement("input");
+          inputName.type = "hidden";
+          inputName.name = "expense_name[]";
+          inputName.value = expenseName.value;
+          expensesContainer.appendChild(inputName);
+
+          const inputPrice = document.createElement("input");
+          inputPrice.type = "hidden";
+          inputPrice.name = "expense_price[]";
+          inputPrice.value = expensePrice.value;
+          expensesContainer.appendChild(inputPrice);
+
+          expenseName.value = "";
+          expensePrice.value = "";
+          $("#addExpenseModal").modal("hide");
+        } else {
+          alert("Veuillez remplir tous les champs.");
+        }
+      });
+    });
+  </script>
 {% endblock %}

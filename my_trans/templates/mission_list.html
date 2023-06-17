@@ -1,44 +1,58 @@
 {% extends 'base.html' %}
 
-{% block title %}Liste des missions{% endblock %}
-
 {% block content %}
-  <h1 class="mb-4">Liste des missions</h1>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Nom</th>
-        <th>Date de départ</th>
-        <th>Lieu de départ</th>
-        <th>Date d'arrivée</th>
-        <th>Lieu d'arrivée</th>
-        <th>Distance</th>
-        <th>Autres charges</th>
-        <th>Prix</th>
-        <th>Employés</th> <!-- Nouvelle colonne pour les employés -->
-      </tr>
-    </thead>
-    <tbody>
-      {% for mission in missions %}
-        <tr>
-          <td>{{ mission.id }}</td>
-          <td>{{ mission.nom }}</td>
-          <td>{{ mission.date_depart }}</td>
-          <td>{{ mission.lieu_depart }}</td>
-          <td>{{ mission.date_arrivee }}</td>
-          <td>{{ mission.lieu_arrivee }}</td>
-          <td>{{ mission.distance }}</td>
-          <td>{{ mission.autres_charges }}</td>
-          <td>{{ mission.prix }}</td>
-          <td>
-            {% for employee in mission.employees.all %}
-              {{ employee.first_name }} {{ employee.last_name }}
-              {% if not forloop.last %}, {% endif %}
-            {% endfor %}
-          </td> <!-- Nouvelle cellule pour afficher les employés associés à la mission -->
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+<h2>Liste des missions</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Date de départ</th>
+      <th>Lieu de départ</th>
+      <th>Date d'arrivée</th>
+      <th>Lieu d'arrivée</th>
+      <th>Distance</th>
+      <th>Autres charges</th>
+      <th>Prix</th>
+      <th>Employés</th>
+      <th>Catégorie</th>
+      <th>Frais supplémentaires</th>
+      <th>Action</th> <!-- Ajout de cette colonne pour les actions -->
+    </tr>
+  </thead>
+  <tbody>
+    {% for mission in missions %}
+    <tr>
+      <td>{{ mission.nom }}</td>
+      <td>{{ mission.date_depart }}</td>
+      <td>{{ mission.lieu_depart }}</td>
+      <td>{{ mission.date_arrivee }}</td>
+      <td>{{ mission.lieu_arrivee }}</td>
+      <td>{{ mission.distance }}</td>
+      <td>{{ mission.autres_charges }}</td>
+      <td>{{ mission.prix }}</td>
+      <td>
+          {% for employee in mission.employees.all %}
+            {{ employee.first_name }} {{ employee.last_name }}
+          {% endfor %}
+      </td>
+      <td>{{ mission.categorie }}</td>
+      <td>
+        <ul>
+          {% for frais in frais_supplementaires %}
+            {% if frais.mission.id == mission.id %}
+              <li>{{ frais.nom }} : {{ frais.prix }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </td>
+      <!-- Boutons d'édition et de suppression -->
+      <td>
+        <a href="{% url 'edit_mission' mission.id %}" class="btn btn-warning">Modifier</a>
+        <a href="{% url 'delete_mission' mission.id %}" class="btn btn-danger">Supprimer</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 {% endblock %}

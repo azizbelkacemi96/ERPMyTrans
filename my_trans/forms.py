@@ -1,7 +1,5 @@
 from django import forms
-
-from my_trans.models import Mission, Employee
-
+from my_trans.models import Mission, Employee, FraisSupplementaire
 
 class MissionForm(forms.ModelForm):
     employees = forms.ModelMultipleChoiceField(
@@ -21,9 +19,19 @@ class MissionForm(forms.ModelForm):
             'autres_charges',
             'prix',
             'employees',
+            'hotel',
+            'volume',
+            'categorie',
+            'peage',
+            'location',
         ]
 
 class EmployeeForm(forms.ModelForm):
     class Meta:
         model = Employee
         fields = ['first_name', 'last_name']
+    def __str__(self):
+        if self.last_name:
+            return self.first_name + " " + self.last_name
+        else:
+            return self.first_name
